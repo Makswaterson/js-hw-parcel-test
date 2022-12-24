@@ -144,7 +144,7 @@
 //     setTimeout(()=> {
 // resolve(result ? 'even' : 'odd')
 //     },result ? 1000 : 2000)
-   
+
 //   })
 //   return promise
 // }
@@ -156,7 +156,6 @@
 // .catch((error)=>{
 //   console.log(error)
 // })
-
 
 /**
  * ЗАВДАННЯ 5
@@ -208,7 +207,6 @@
 //   console.log(error)
 // })
 
-
 /**
  * ЗАВДАННЯ 7
  * Функція countWithDelay приймає 3 аргументи:
@@ -219,28 +217,35 @@
  * logCount повинна логувати кількість викликів
  */
 
-// const countWithDelay = (delay = 0, steps = 0, stepInterval = 0) => {
-//   for (let index = 0; index < steps ; index++) {
-//     logCount(index,delay)
-//     .then((responce)=>{
+const countWithDelay =
+  ((delay = 0),
+  (steps = 0),
+  (stepInterval = 0) => {
+    for (let index = 0; index < steps; index++) {}
+  });
 
-//   console.log(responce);
-// })
-//  delay +=stepInterval
-// }
+countWithDelay(3000, 6, 1000);
+
+function logCount() {}
+
+// const countWithDelay = (delay = 0, steps = 0, stepInterval = 0) => {
+//   for (let index = 0; index < steps; index++) {
+//     logCount(index, delay).then(responce => {
+//       console.log(responce);
+//     });
+//     delay += stepInterval;
+//   }
 // };
 
-//  countWithDelay(3000, 6, 1000);
+// countWithDelay(3000, 6, 1000);
 
-// function logCount(index,delay){
-//   return new Promise((resolve,reject)=> {
-//     setTimeout(()=> {
-//       resolve(index)
-//     },delay)
-//   })
+// function logCount(index, delay) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve(index);
+//     }, delay);
+//   });
 // }
-
-
 
 // Напишіть JavaScript, щоб отримати кількість днів на місяць.
 // Приклад введення:
@@ -251,10 +256,22 @@
 //   return new Date(year,month,0).getDate()
 // }
 // console.log(getDaysInMonth(9, 2021));
-const amount = ['січень','лютий','','','','']
-function month_name(param){
- const index =  new Date(param).getMonth()
- return amount[index]
-}
-console.log(month_name('10/11/2021'));
-clg
+
+// const amount = [
+//   'січень',
+//   'лютий',
+//   'березень',
+//   'квітень',
+//   'травень',
+//   '',
+//   '',
+//   '',
+//   '',
+//   'жовтень',
+// ];
+
+// function month_name(params) {
+//   const index = new Date(params).getMonth();
+//   return amount[index];
+// }
+// console.log(month_name('10/11/2021'));
