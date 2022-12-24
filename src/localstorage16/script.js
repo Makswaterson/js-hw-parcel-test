@@ -1,4 +1,7 @@
-const content = document.querySelector('.content');
+const contentRef = document.querySelector('.content');
+const containerRef = document.querySelector('.container');
+console.log(containerRef);
+console.log(contentRef);
 const KEY_X = 'keyX';
 const KEY_O = 'keyO';
 const CURRENT_PLAYER = 'player';
@@ -21,8 +24,8 @@ for (let i = 1; i <= 9; i += 1) {
   markup += `<div class="item" data-id="${i}"></div>`;
 }
 
-content.insertAdjacentHTML('beforeend', markup);
-content.addEventListener('click', onClick);
+contentRef.insertAdjacentHTML('beforeend', markup);
+contentRef.addEventListener('click', onClick);
 
 function onClick(evt) {
   // '' => !false => true
