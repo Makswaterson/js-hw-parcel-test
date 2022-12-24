@@ -217,16 +217,22 @@
  * logCount повинна логувати кількість викликів
  */
 
-const countWithDelay =
-  ((delay = 0),
-  (steps = 0),
-  (stepInterval = 0) => {
-    for (let index = 0; index < steps; index++) {}
-  });
+// const countWithDelay = (delay = 0, steps = 0, stepInterval = 0) => {
+//   for (let index = 0; index < steps; index++) {
+//     logCount(index, delay).then(responce => console.log(responce));
+//     delay += stepInterval;
+//   }
+// };
 
-countWithDelay(3000, 6, 1000);
+// countWithDelay(3000, 6, 1000);
 
-function logCount() {}
+// function logCount(index, delay) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve(index);
+//     }, delay);
+//   });
+// }
 
 // const countWithDelay = (delay = 0, steps = 0, stepInterval = 0) => {
 //   for (let index = 0; index < steps; index++) {
