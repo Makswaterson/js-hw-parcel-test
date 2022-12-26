@@ -358,3 +358,24 @@ body.dark-theme {
 .menu__item {
   width: 500px;
 }
+.timer__items {
+  display: flex;
+  font-size: 48px;
+  max-width: max-content;
+  margin: 0 auto;
+}
+
+.timer__item {
+  position: relative;
+  min-width: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.timer__item:not(:last-child)::after {
+  content: ':';
+  position: absolute;
+  right: -15px;
+}
